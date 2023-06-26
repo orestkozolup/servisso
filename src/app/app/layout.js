@@ -11,8 +11,8 @@ const StyledDiv = styled("div")({
   alignItems: "center",
 });
 
-const StyledHeader = styled("h2")();
-const StyledSubtext = styled("p")();
+const StyledHeader = styled("h2")({});
+const StyledSubtext = styled("p")({});
 
 const AppLayout = ({ children }) => (
   <Box sx={{ height: "100%" }}>
