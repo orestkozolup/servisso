@@ -7,6 +7,7 @@ export const ButtonLink = ({ href, label }) => {
       <Button
         sx={{
           width: "100%",
+          color: theme => theme.palette.primary.contrastText
         }}
       >
         {label}
