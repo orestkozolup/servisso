@@ -20,7 +20,8 @@ const AppLayout = ({ children }) => (
       <Grid
         item
         xs={12}
-        md={2}
+        md={2.5}
+        lg={2}
         sx={{
           bgcolor: (theme) => theme.palette.primary.main,
           borderRadius: "0 1.5rem 1.5rem 0",
@@ -31,14 +32,18 @@ const AppLayout = ({ children }) => (
             sx={{
               fontSize: "2rem",
               color: (theme) => theme.palette.primary.contrastText,
+              mb: 0,
+              fontWeight: 100,
             }}
           >
             Servisso
           </StyledHeader>
           <StyledSubtext
             sx={{
-              fontSize: "1rem",
+              fontSize: "0.8rem",
               color: (theme) => theme.palette.primary.contrastText,
+              mt: 0,
+              mb: '2rem'
             }}
           >
             Admin panel
@@ -50,7 +55,7 @@ const AppLayout = ({ children }) => (
           </ButtonGroup>
         </StyledDiv>
       </Grid>
-      <Grid item xs={12} md={10}>
+      <Grid item xs={12} md={9.5} lg={10}>
         {children}
       </Grid>
     </Grid>

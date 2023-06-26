@@ -7,7 +7,10 @@ export const ButtonLink = ({ href, label }) => {
       <Button
         sx={{
           width: "100%",
-          color: theme => theme.palette.primary.contrastText
+          color: theme => theme.palette.primary.contrastText,
+          textTransform: 'none',
+          borderBottom: theme => `1px solid ${theme.palette.primary.contrastText}`,
+          borderRadius: 0
         }}
       >
         {label}

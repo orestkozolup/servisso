@@ -24,6 +24,7 @@ export default function RootLayout({ children }) {
         style={{
           height: "100vh",
           margin: 0,
+          fontFamily: '"Inter", sans-serif',
         }}
       >
         <ThemeProvider theme={theme}>{children}</ThemeProvider>
