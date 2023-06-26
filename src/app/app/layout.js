@@ -1,18 +1,26 @@
 "use client";
 
-import Drawer from "@mui/material/Drawer";
+import { Box, Grid, ButtonGroup } from "@mui/material";
+import { ButtonLink } from "@/components";
+import { CALENDAR_NAVIGATION, ORIENTATIONS } from "@/const";
 
 const AppLayout = ({ children }) => (
-  <div>
-    <Drawer anchor="left" open hideBackdrop>
-      <h2>Servisso</h2>
-      <p>Admin panel</p>
-      <h4>Calendar</h4>
-      <h4>Manage your garage</h4>
-      <h4>Service requests</h4>
-    </Drawer>
-    {children}
-  </div>
+  <Box>
+    <Grid container>
+      <Grid item xs={12} md={2}>
+        <h2>Servisso</h2>
+        <p>Admin panel</p>
+        <ButtonGroup orientation={ORIENTATIONS.VERTICAL}>
+          {CALENDAR_NAVIGATION.map(({ href, label }) => (
+            <ButtonLink href={href} label={label} />
+          ))}
+        </ButtonGroup>
+      </Grid>
+      <Grid item xs={12} md={10}>
+        {children}
+      </Grid>
+    </Grid>
+  </Box>
 );
 
 export default AppLayout;
