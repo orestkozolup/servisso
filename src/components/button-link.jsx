@@ -4,7 +4,13 @@ import { Button } from "@mui/material";
 export const ButtonLink = ({ href, label }) => {
   return (
     <Link href={href}>
-      <Button>{label}</Button>
+      <Button
+        sx={{
+          width: "100%",
+        }}
+      >
+        {label}
+      </Button>
     </Link>
   );
 };

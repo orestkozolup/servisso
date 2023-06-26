@@ -12,7 +12,7 @@ const AppLayout = ({ children }) => (
         <p>Admin panel</p>
         <ButtonGroup orientation={ORIENTATIONS.VERTICAL}>
           {CALENDAR_NAVIGATION.map(({ href, label }) => (
-            <ButtonLink href={href} label={label} />
+            <ButtonLink href={href} label={label} key={href} />
           ))}
         </ButtonGroup>
       </Grid>
